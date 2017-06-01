@@ -1,8 +1,8 @@
 # Building The Data Cleanup Pipeline Docker Image
-The Dockefile in this directory contains all the commands, in order, needed to build the **Data Cleanup Pipeline** docker image.
+The Dockefile in this directory contains all the commands, in order, needed to build the **Phenotype Prediction Pipeline** docker image.
 
 
-* Run the "make" command to build the **Data Cleanup Pipeline** docker image (output: docker image called "data_cleanup_pipeline" and a tag with today's date and time):
+* Run the "make" command to build the **Data Cleanup Pipeline** docker image (output: docker image called "phenotype_prediction_pipeline" and a tag with today's date and time):
 ```
     make build_docker_image
 ```
@@ -23,7 +23,7 @@ The Dockefile in this directory contains all the commands, in order, needed to b
 
 1 Change directory to the directory  where you want to run.
 
-2 docker run -v \`pwd\`:/home/test/run_dir/ -it knowengdev/data_cleanup_pipeline:10_20_2016 
+2 docker run -v \`pwd\`:/home/test/run_dir/ -it knowengdev/phenotype_prediction_pipeline:01_06_2017 
 
 3 cd test
 
