@@ -21,16 +21,24 @@ The Dockefile in this directory contains all the commands, in order, needed to b
 ## How to run this docker image
 * * * 
 
-1 Change directory to the directory  where you want to run.
+### 1. Run the following command with the specified docker image:
+```
+docker run -v `pwd`:/home/test/run_dir/ -it knowengdev/phenotype_prediction_pipeline:06_02_2017
+```
 
-2 docker run -v \`pwd\`:/home/test/run_dir/ -it knowengdev/phenotype_prediction_pipeline:01_06_2017 
+### 2. Change directory to the "test" directory
+```
+cd test
+```
 
-3 cd test
+### 3. Create the local directory "run_dir" and place all the run files in it
+```
+make env_setup
+```
 
-4 make env_setup
+### 4. Run the Phenotype Prediction Pipeline
+```
+make run_lasso
+make run_elastic_net
+```
 
-5 edit the .yml file (use the comments to see options)
-
-* Check on docker.hub to get the latest image. 
-
-* If you don't "cp" your data into the volume you mounted it will disappear when you exit docker.
