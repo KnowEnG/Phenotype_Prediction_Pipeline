@@ -1,0 +1,14 @@
+# ------------------------------------------------------------------------------------------------------
+# - This is the yaml file for svr algorithm -
+# ------------------------------------------------------------------------------------------------------
+
+method:                          svr_predict
+
+spreadsheet_name_full_path:      ../data/spreadsheets/features_train_clean.df
+response_name_full_path:         ../data/spreadsheets/response_train_clean.df
+test_spreadsheet_name_full_path: ../data/spreadsheets/features_test_clean.df
+
+results_directory:               ./run_dir/results
+
+# regression model parameters 
+svr_kernel: rbf

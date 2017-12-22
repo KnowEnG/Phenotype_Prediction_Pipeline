@@ -9,8 +9,15 @@ def elastic_net_predict(run_parameters):
     from phenotype_prediction_toolbox import run_elastic_predict
     run_elastic_predict(run_parameters)
 
-SELECT = {'elastic_net_predict': elastic_net_predict,
-            'lasso_predict': lasso_predict}
+def svr_predict(run_parameters):
+    from phenotype_prediction_toolbox import run_svr_predict
+    run_svr_predict(run_parameters)
+
+SELECT = {
+            'lasso_predict': lasso_predict,
+            'elastic_net_predict': elastic_net_predict,
+            'svr_predict': svr_predict
+        }
 
 def main():
     import sys

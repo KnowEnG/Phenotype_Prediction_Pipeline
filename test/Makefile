@@ -32,10 +32,14 @@ endif
  
 
 # Benchmark tests
-run_elastic_net:
-	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file BENCHMARK_2_ElasticNet.yml
 run_lasso:
 	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file BENCHMARK_1_Lasso.yml
+
+run_elastic_net:
+	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file BENCHMARK_2_ElasticNet.yml
+	
+run_svr:
+	python3 $(SCRIPT) -run_directory $(RUN_DIR) -run_file BENCHMARK_3_SVR.yml
 
 # Cleanup
 final_clean:	clean_dir_recursively
