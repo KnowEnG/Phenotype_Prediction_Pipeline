@@ -42,7 +42,11 @@ def main():
         'BENCHMARK_2_ElasticNet': [
                 'BENCHMARK_2_ElasticNet.yml',
                 'features_test_clean_elastic_net_predict'
-            ]   
+            ],
+        'BENCHMARK_3_SVR': [
+                'BENCHMARK_3_SVR.yml',
+                'features_test_clean_svr_predict'
+            ]     
     }
 
     os.system('make env_setup')
